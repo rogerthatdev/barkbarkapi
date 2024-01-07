@@ -1,21 +1,21 @@
 {
 	"info": {
-		"_postman_id": "e72ed736-3b1d-4a6b-bc44-d0517bc1b3b7",
-		"name": "Test collection",
-		"description": "test collection",
+		"_postman_id": "2e7109c2-1024-466f-a808-e7fdeaa7ed17",
+		"name": "New collection",
+		"description": "Dog breeds",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "11039268-e72ed736-3b1d-4a6b-bc44-d0517bc1b3b7"
+		"_uid": "11039268-2e7109c2-1024-466f-a808-e7fdeaa7ed17"
 	},
 	"item": [
 		{
-			"name": "spacecrafts",
+			"name": "dogbreeds",
 			"item": [
 				{
-					"name": "{spacecraftId}",
+					"name": "{breedId}",
 					"item": [
 						{
-							"name": "Read a spacecraft",
-							"id": "a780cfed-0f22-486d-9bbb-43f8d332820f",
+							"name": "Read a dog breed",
+							"id": "0f674146-eadb-4ba1-be8c-824fc9fdacd0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -28,27 +28,27 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/spacecrafts/:spacecraftId",
+									"raw": "{{baseUrl}}/dogbreeds/:breedId",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
-										"spacecrafts",
-										":spacecraftId"
+										"dogbreeds",
+										":breedId"
 									],
 									"variable": [
 										{
-											"key": "spacecraftId",
+											"key": "breedId",
 											"value": "<string>",
-											"description": "(Required) The unique identifier of the spacecraft"
+											"description": "(Required) The unique identifier of the dog breed"
 										}
 									]
 								}
 							},
 							"response": [
 								{
-									"id": "a94d0212-fbda-4e24-af6e-8fa822bf2c53",
-									"name": "The spacecraft corresponding to the provided `spacecraftId`",
+									"id": "fe774084-cb97-4a27-bc5b-279608c598b5",
+									"name": "The dog breed corresponding to the provided `breedId`",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
@@ -63,17 +63,17 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/spacecrafts/:spacecraftId",
+											"raw": "{{baseUrl}}/dogbreeds/:breedId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
-												"spacecrafts",
-												":spacecraftId"
+												"dogbreeds",
+												":breedId"
 											],
 											"variable": [
 												{
-													"key": "spacecraftId"
+													"key": "breedId"
 												}
 											]
 										}
@@ -88,11 +88,11 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"capsule\",\n  \"description\": \"<string>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"hunting\",\n  \"description\": \"<string>\"\n}"
 								},
 								{
-									"id": "77265a15-91d5-468c-afb2-81b4502cb0d6",
-									"name": "No spacecraft found for the provided `spacecraftId`",
+									"id": "de507292-1474-40ee-a4db-eda49e39e1ab",
+									"name": "No dog breed found for the provided `breedId`",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
@@ -107,17 +107,17 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/spacecrafts/:spacecraftId",
+											"raw": "{{baseUrl}}/dogbreeds/:breedId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
-												"spacecrafts",
-												":spacecraftId"
+												"dogbreeds",
+												":breedId"
 											],
 											"variable": [
 												{
-													"key": "spacecraftId"
+													"key": "breedId"
 												}
 											]
 										}
@@ -135,7 +135,7 @@
 									"body": "{\n  \"message\": \"<string>\"\n}"
 								},
 								{
-									"id": "0ed8b88f-0631-4422-81f7-aa6f1937100a",
+									"id": "5fe3ef20-d8e9-4259-affa-95701a30cac4",
 									"name": "Unexpected error",
 									"originalRequest": {
 										"method": "GET",
@@ -151,17 +151,17 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/spacecrafts/:spacecraftId",
+											"raw": "{{baseUrl}}/dogbreeds/:breedId",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
-												"spacecrafts",
-												":spacecraftId"
+												"dogbreeds",
+												":breedId"
 											],
 											"variable": [
 												{
-													"key": "spacecraftId"
+													"key": "breedId"
 												}
 											]
 										}
@@ -181,37 +181,35 @@
 							]
 						}
 					],
-					"id": "08e87f8b-92b9-40b2-93a9-dabd56070e24"
+					"id": "0d5217e5-008a-4c78-97af-8992f101dab4"
 				}
 			],
-			"id": "e18117c5-0fd1-4c6a-96aa-999fcab24646"
+			"id": "3d9aca06-7e55-49a1-b3ec-a9ac957078d8"
 		}
 	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "b1b8ad5a-bdf9-416d-b3a3-3acb83ea451e",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-Api-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
 			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "841256f1-304f-48d5-90b4-3d8fb4aac00f",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
+		]
+	},
 	"variable": [
 		{
-			"id": "3927f1da-0f6a-4616-83fc-9bcc9d33a367",
+			"id": "a3e38fe2-081f-451a-b562-2cf80cc5af7b",
 			"key": "baseUrl",
 			"value": "/"
 		}
