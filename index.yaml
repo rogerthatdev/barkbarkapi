@@ -2,28 +2,28 @@ openapi: '3.0.0'
 info:
   version: '1.0.0'
   title: 'Sample API'
-  description: Buy or rent spacecrafts
+  description: Dog breeds
 
 paths:
-  /spacecrafts/{spacecraftId}:
+  /dogbreeds/{breedId}:
     parameters:
-      - name: spacecraftId
-        description: The unique identifier of the spacecraft
+      - name: breedId
+        description: The unique identifier of the dog breed
         in: path
         required: true
         schema:
-          $ref: '#/components/schemas/SpacecraftId'
+          $ref: '#/components/schemas/BreedId'
     get:
-      summary: Read a spacecraft
+      summary: Read a dog breed
       responses:
         '200':
-          description: The spacecraft corresponding to the provided `spacecraftId`
+          description: The dog breed corresponding to the provided `breedId`
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Spacecraft'
+                $ref: '#/components/schemas/Dogbreed'
         404:
-          description: No spacecraft found for the provided `spacecraftId`
+          description: No dog breed found for the provided `breedId`
           content:
             application/json:
               schema:
@@ -36,10 +36,10 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
-    SpacecraftId:
-      description: The unique identifier of a spacecraft
+    BreedId:
+      description: The unique identifier of a dog breed
       type: string
-    Spacecraft:
+    Dogbreed:
       type: object
       required:
         - id
@@ -47,17 +47,17 @@ components:
         - type
       properties:
         id:
-          $ref: '#/components/schemas/SpacecraftId'
+          $ref: '#/components/schemas/BreedId'
         name:
           type: string
         type:
           type: string
           enum:
-            - capsule
-            - probe
-            - satellite
-            - spaceplane
-            - station
+            - companion
+            - guarding
+            - herding
+            - hunting
+            - working
         description:
           type: string
     Error:
